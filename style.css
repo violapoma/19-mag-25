@@ -1,0 +1,331 @@
+:root {
+  --footer-color: rgb(119, 119, 119);
+}
+
+.logoImg {
+  width: 100px !important;
+}
+
+body {
+  width: 100% !important;
+}
+
+nav>div.container-fluid {
+  width: 90%;
+  margin: auto;
+  padding: 0;
+}
+
+nav a {
+  color: white !important;
+  font-weight: 300 !important;
+}
+
+nav .active {
+  font-weight: 600 !important;
+}
+
+
+nav li .fs-6 {
+  font-size: 0.85rem !important;
+}
+
+.hidden {
+  opacity: 0;
+  cursor: default;
+}
+
+
+#notify .dropdown-toggle::after {
+  display: none !important;
+}
+
+.profileImg {
+  width: 2rem !important;
+  border-radius: 50%;
+}
+
+.dropdown-menu:first-of-type {
+  left: unset;
+  right: 0px;
+  border: 1px solid var(--bs-white);
+}
+
+.dropdown-menu>li>a:hover {
+  color: black !important;
+}
+
+li>form>button {
+  background-color: transparent !important;
+  border: none !important;
+  color: white;
+}
+
+main {
+  /* border: 1px solid gainsboro; */
+  width: 90%;
+  margin: auto;
+  padding: 0.5em;
+
+}
+
+.form-select {
+  width: 200px;
+  margin-left: 1em;
+  border-radius: 0px;
+}
+
+
+#trending {
+  /* border: 1px solid pink; */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 2em;
+}
+
+section {
+  margin-bottom: 2em;
+}
+
+/* *****************CAROUSEL********************************** */
+.netflix-carousel-outer {
+  position: relative;
+  overflow: hidden;
+  /* <-- importante! */
+  padding: 0 60px;
+  /* spazio per gradienti e scroll */
+}
+
+.netflix-carousel-wrapper {
+  overflow-x: auto;
+  display: flex;
+
+  scroll-behavior: smooth;
+
+  margin: 0 -60px;
+  /* così le card escono leggermente dai lati */
+}
+
+.netflix-carousel-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.netflix-carousel {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Edge */
+}
+
+
+/* Gradienti laterali trasparenti */
+.netflix-carousel-outer::before,
+.netflix-carousel-outer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.netflix-carousel-outer::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0));
+}
+
+.netflix-carousel-outer::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0));
+}
+
+.netflix-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.btn-carousel {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.btn-prev {
+  left: 0;
+}
+
+.btn-next {
+  right: 0;
+}
+
+.movie-card {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  transition: transform 0.3s ease;
+  border-radius: 5px;
+  z-index: 2;
+  flex: 0 0 250px;
+  scroll-snap-align: start;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .movie-card {
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-card {
+    flex: 0 0 80%;
+  }
+}
+
+.movie-card .card-img-top {
+  width: 100%;
+  /* height: auto; */
+  display: block;
+}
+
+
+.movie-card .card-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2.1em;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  height: 100%;
+  cursor: pointer;
+  background-image: url(./assets/imgs/expand.svg);
+  background-origin: content-box;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  z-index: 50;
+}
+
+.movie-card:hover .card-body {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  z-index: 20;
+
+}
+
+/* *************************************************** */
+
+
+footer {
+  width: 60%;
+  margin: auto;
+  color: gainsboro;
+  font-size: 0.8rem;
+  color: var(--footer-color);
+  line-height: 2.5;
+
+  /* border: 1px solid palegreen; */
+}
+
+footer a {
+  color: var(--footer-color);
+  font-size: 1.5rem;
+  padding-right: 0.8rem;
+}
+
+#fakeBtn {
+  display: inline-block;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  padding: 0.1em 0.8em;
+  border: 1px solid var(--footer-color);
+}
+
+#copyright {
+  font-size: 0.5rem
+}
+
+/* ********************* MOVIE MODAL ************************ */
+.modal * {
+  border: 0px; /*toglie le righe tra sezioni*/
+}
+.modal-header {
+  padding: 0;
+  position: relative; /*per l'ombra con after*/
+}
+
+.modal-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(125, 125, 125, 0) 37%, rgba(255, 255, 255, 0) 100%);  
+  pointer-events: none; /* permette click sull'immagine */
+}
+
+.modal-body {
+  position:relative;
+  padding-top: 2em;
+}
+.modal-body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(125, 125, 125, 0) 37%, rgba(255, 255, 255, 0) 100%);
+}
+
+.modal-footer {
+  justify-content: center;
+}
+
+#toggleSaved i, #toggleLiked i{
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+#toggleLiked i {
+  display: inline-block;
+}
+.fade-out {
+  opacity: 0; 
+  transform: scale(0.8) rotate(-90deg);
+}
+
+.pop {
+  animation: pop 0.3s linear ;
+}
+@keyframes pop {
+  0% { transform: scale(1);}
+  50% { transform: scale(1.5);}
+  100% {transform: scale(1)}
+}
+
+/* cmd + d per evidenziare dei risultati prima selezionati e poi scrivere dopo */
