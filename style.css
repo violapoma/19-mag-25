@@ -337,7 +337,7 @@ footer a {
   margin: auto;
   border-bottom: 1px solid var(--footer-color)
 }
-li::before {
+#myListModal li::before {
   content: '‣ ';
   margin-right: 0.5em;
 }
@@ -347,6 +347,9 @@ li::before {
   margin-right: 2em;
   padding-top: 0.5em;
 }
+#myListModal .idMovie {
+  opacity: 0;
+}
 
 #myListModal i {
   position:absolute;
@@ -354,5 +357,13 @@ li::before {
   bottom: 0.1em;
 }
 
+#myListModal i {
+  transition: transform 0.5s ease;;
+}
+
+#myListModal i:hover {
+  cursor: pointer;
+  transform: scale(1.2) rotate(180deg);
+}
 
 /* cmd + d per evidenziare dei risultati prima selezionati e poi scrivere dopo */

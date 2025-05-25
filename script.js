@@ -174,17 +174,20 @@ function addToList(myArray, movieID, movieTitle) {
 
 
 function fillMyListModal() {
+  // console.log('[fillMyListModal]: myList: ');
+  // console.log(myList);
   const mylistModal = document.getElementById("myListModal");
   let html = '';
   if (myList.length === 0)
     html += '<p class="fs-1 m-3">Your list is empty</p>';
   else {
     html += '<ul class="fs-4">';
-    for (let i = 0; i<myList.length; i++)
-      html+=`<li><span class="movieName"> ${myList[i].title}</span> <i class="bi bi-arrows-angle-expand"></i></li>`
+    for (let i = 0; i<myList.length; i++) {
+      html+=`<li><span class="movieName"> ${myList[i].title}</span><i class="bi bi-arrows-angle-expand" data-bs-toggle="modal" data-bs-target="#movieModal" onclick="fillMovieModal(${myList[i].id})"></i></li>`
+    }
     html += '</ul>';
   }
-  console.log(html);
+
   mylistModal.querySelector('#myListModal .modal-body').innerHTML = html;
 }
 
