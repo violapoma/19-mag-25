@@ -36,7 +36,7 @@
                 <a class="nav-link" href="#">Recently Added</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">My List</a>
+                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#myListModal" onclick="fillMyListModal()">My List</a>
               </li>
             </ul>
           </div>
@@ -93,7 +93,7 @@
 
 
 
-    <!-- Modal -->
+    <!-- movieModal -->
     <div class="modal fade" id="movieModal" tabindex="-1" aria-labelledby="movieModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content bg-dark text-white">
@@ -115,6 +115,19 @@
 
     <!-- fine modal -->
 
+    <!-- myListModal -->
+    <div class="modal fade" id="myListModal" tabindex="-1" aria-labelledby="myListModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content bg-dark text-white">
+          <div class="modal-header">
+            <h2 id="myListModalLabel" class="modal-title m-3" >My List</h2>
+          </div>
+          <div class="modal-body">
+
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 

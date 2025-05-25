@@ -285,7 +285,7 @@ footer a {
   position: relative; /*per l'ombra con after*/
 }
 
-.modal-header::after {
+#movieModal .modal-header::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -297,7 +297,7 @@ footer a {
   position:relative;
   padding-top: 2em;
 }
-.modal-body::before {
+#movieModal .modal-body::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -327,5 +327,32 @@ footer a {
   50% { transform: scale(1.5);}
   100% {transform: scale(1)}
 }
+/* ************** myListModal ****************** */
+#myListModal li {
+  list-style: none;
+  position: relative;
+  padding-left: 0;
+  font-weight: 300;
+  width: 80%;
+  margin: auto;
+  border-bottom: 1px solid var(--footer-color)
+}
+li::before {
+  content: '‣ ';
+  margin-right: 0.5em;
+}
+
+#myListModal li span {
+  display: inline-block;
+  margin-right: 2em;
+  padding-top: 0.5em;
+}
+
+#myListModal i {
+  position:absolute;
+  right: 0;
+  bottom: 0.1em;
+}
+
 
 /* cmd + d per evidenziare dei risultati prima selezionati e poi scrivere dopo */

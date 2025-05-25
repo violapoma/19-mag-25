@@ -153,9 +153,7 @@ function setLikedIcon(movieID) {
 
   setTimeout(() => {
     icon.className = liked ? 'bi bi-hand-thumbs-up-fill' : 'bi bi-hand-thumbs-up';
-
     icon.classList.add('pop');
-
     setTimeout(() => {
       icon.classList.remove('pop');
     }, 300);
@@ -175,6 +173,20 @@ function addToList(myArray, movieID, movieTitle) {
 }
 
 
+function fillMyListModal() {
+  const mylistModal = document.getElementById("myListModal");
+  let html = '';
+  if (myList.length === 0)
+    html += '<p class="fs-1 m-3">Your list is empty</p>';
+  else {
+    html += '<ul class="fs-4">';
+    for (let i = 0; i<myList.length; i++)
+      html+=`<li><span class="movieName"> ${myList[i].title}</span> <i class="bi bi-arrows-angle-expand"></i></li>`
+    html += '</ul>';
+  }
+  console.log(html);
+  mylistModal.querySelector('#myListModal .modal-body').innerHTML = html;
+}
 
 function removeFromList (myArray, movieID) {
   const index = myArray.findIndex(e => e.id === movieID);
