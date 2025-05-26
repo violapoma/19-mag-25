@@ -108,46 +108,44 @@ function fillMovieModal(movieClicked) {
       html += `<h3 class="fs-6">${movie.genre}</h3>`;
       html += `<p class="fs-5">${movie.description}</p>`;
       modal.querySelector('.modal-body').innerHTML = html;
-      modal.querySelector('.save').setAttribute('onclick', `addToFav(${movie.id}, '${movie.title}')`);
-      setSavedIcon(movie.id); //setto l'icona salvata o da salvare
+      modal.querySelector('.save').setAttribute('onclick', `addToSaved(${movie.id}, '${movie.title}')`);
+      setSavedIcon(movie.id, movie.saved); //setto l'icona salvata o da salvare
 
       modal.querySelector('.like').setAttribute('onclick', `addToLiked(${movie.id}, '${movie.title}')`);
-      setLikedIcon(movie.id); //setto l'icona liked o no
-
+      setLikedIcon(movie.id, movie.liked); //setto l'icona liked o no
     });
 }
 
-//TODO: RIFALLA!!!! COSì FA SCHIFO
-function addToLiked(movieID, movieTitle) {
-  if(likedList.some(e => e.id === movieID))
-    return;
-  addToList(likedList, movieID, movieTitle);
-  setLikedIcon(movieID); //setto l'icona salvata o da salvare
-  console.log(['likedList:']);
-  console.log(likedList);
-}
-
-//TODO: funzione per cambiare l'icona
 //funzione che aggiunge SOLO ai preferiti 
-function addToFav(movieID, movieTitle) {
-  if (myList.some(e => e.id === movieID))  //c'è già
-    return;
-  addToList(myList, movieID, movieTitle);
-  setSavedIcon(movieID); //setto l'icona salvata o da salvare
+function addToSaved(movieID, movieTitle) {
+  const saved = myList.some(e => e.id === movieID); //controlla se è già nei salvati
+  //true -> c'è già, rimuovi dalla lista; false -> non c'è, aggiungi in lista
+  saved ? removeFromList(myList, movieID) : addToList(myList, movieID, movieTitle);
+  const nowSaved = myList.some(e => e.id === movieID);
+  setSavedIcon(movieID, nowSaved); //setto l'icona salvata o da salvare
+  console.log(['myList:']);
+  console.log(myList);
 }
-
-function setSavedIcon(movieID) {
-  const saved = myList.some(e => e.id === movieID);
+function setSavedIcon(movieID, saved) {
   const icon = modal.querySelector('#toggleSaved i');
   icon.classList.add('fade-out');
   setTimeout(() => {
+    //saved==true -> check; saved==false -> add
     icon.className = saved ? 'bi bi-check-circle' : 'bi bi-plus-circle';
     icon.classList.remove('fade-out');
   }, 300);
 }
 
-function setLikedIcon(movieID) {
+
+function addToLiked(movieID, movieTitle) {
   const liked = likedList.some(e => e.id === movieID);
+  liked ? removeFromList(likedList, movieID): addToList(likedList, movieID, movieTitle) ;
+  const nowLiked = likedList.some(e => e.id === movieID);
+  setLikedIcon(movieID, nowLiked); //setto l'icona salvata o da salvare
+  console.log(['likedList:']);
+  console.log(likedList);
+}
+function setLikedIcon(movieID, liked) {
   console.log('[setLikedIcon]: liked: ' + liked);
   const icon = modal.querySelector('#toggleLiked i');
 
@@ -156,9 +154,13 @@ function setLikedIcon(movieID) {
     icon.classList.add('pop');
     setTimeout(() => {
       icon.classList.remove('pop');
-    }, 300);
-  }, 300);
+    }, 100);
+  }, 100);
 }
+
+
+
+
 
 //per ora non ci sono controlli se l'elem è gia presente -> 
 //TODO: check se è già in lista -> remove ?? 
@@ -170,6 +172,7 @@ function addToList(myArray, movieID, movieTitle) {
   }
   myArray.push(elem); //aggiungo il film alla lista
   console.log('[addToFav]: Added movie to myList:' + movieTitle );
+  console.log(myArray)
 }
 
 
@@ -196,5 +199,6 @@ function removeFromList (myArray, movieID) {
   if (index !== -1) {
     myArray.splice(index, 1); //rimuovo l'elemento
     console.log('[removeFromList]: id elem rimosso: ' + movieID);
+    console.log(myArray);
   }
 }

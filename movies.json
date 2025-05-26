@@ -7,7 +7,7 @@
     "category": "",
     "description": "Feeling trapped, Esty flees her ultra-Orthodox community in Brooklyn for a new life in Berlin.",
     "saved": true,
-    "watched": false,
+    "liked": false,
     "newRel": true
   },
   {
@@ -18,7 +18,7 @@
     "category": "",
     "description": "To face his grief, a cynical journalist decides to live life to the fullest and say whatever, however he wants.",
     "saved": false,
-    "watched": false,
+    "liked": false,
     "newRel": false
   },
   {
@@ -29,7 +29,7 @@
     "category": "",
     "description": "Macareina Ferreiro never thought she would end up in prison. But when she is arrested for a crime she didn't commit, she has to learn to survive in a world where the rules are different.",
     "saved": true,
-    "watched": false,
+    "liked": false,
     "newRel": true
   },
   {
@@ -40,7 +40,7 @@
     "category": "",
     "description": "A mistery man grantes wishes to people who visit his cafe. In excange, the man wants these people to do some tasks,wich are against any ethical or moral code.",
     "saved": false,
-    "watched": false,
+    "liked": false,
     "newRel": true
   },
   {
@@ -51,7 +51,7 @@
     "category": "",
     "description": "Two young people meet in a summer camp and fall in love. But when the summer ends, they have to face the reality of their lives.",
     "saved": false,
-    "watched": false,
+    "liked": false,
     "newRel": true
   },
   {
@@ -62,7 +62,7 @@
     "category": "",
     "description": "Many people, apparently not related, are found brutally killed all across Iceland. A tormented norwegian detective is brought to the case to try and find a link between the victims.",
     "saved": false,
-    "watched": false,
+    "liked": false,
     "newRel": true
   },
   {
@@ -73,7 +73,7 @@
     "category": "",
     "description": "This is the story of a maid who falls victim of a young phisician's sinister obsession.",
     "saved": false,
-    "watched": false,
+    "liked": false,
     "newRel": true
   },
   {
@@ -84,7 +84,7 @@
     "category": "",
     "description": "Looking for a new beginning, a young nurse moves to a remote town in Northern California. But she soon discovers that the town is not as idyllic as it seems.",
     "saved": false,
-    "watched": false,
+    "liked": false,
     "newRel": false
   },
   {
@@ -95,7 +95,7 @@
     "category": "",
     "description": "A lavish costume drama intertwines with a historical account of the origins of football in England.",
     "saved": false,
-    "watched": false,
+    "liked": false,
     "newRel": true
   },
   {
@@ -106,7 +106,7 @@
     "category": "",
     "description": "This series tells the sotry of andy Komintsky, a retired actor who is trying to make a living as an acting coach.",
     "saved": false,
-    "watched": false,
+    "liked": false,
     "newRel": false
   },
   {
@@ -117,7 +117,7 @@
     "category": "",
     "description": "A couple of college sweethearts finds out, just before the wedding, that maybe they are not as close-knit as they thought. ",
     "saved": false,
-    "watched": false,
+    "liked": false,
     "newRel": true
   },
   {
@@ -128,7 +128,7 @@
     "category": "",
     "description": "A wealthy matriarch tries to save faces when her husband's mistress reveals some twisted family secrets",
     "saved": false,
-    "watched": false,
+    "liked": false,
     "newRel": true
   },
   {
@@ -139,7 +139,7 @@
     "category": "",
     "description": "A mourning publicist writes letters to love, time and death. But when these letters are answered, he has to face the reality of his life.",
     "saved": false,
-    "watched": false
+    "liked": false
   },
   {
     "id": 14,
@@ -149,7 +149,7 @@
     "category": "",
     "description": "Based on a true story, an afro-american laundry woman becomes a millionaire by creating her own line of beauty products.",
     "saved": false,
-    "watched": false
+    "liked": false
   },
   {
     "id": 15,
@@ -159,7 +159,7 @@
     "category": "",
     "description": "Looking for fame, a young Sigmund Freud teams up with a medium to solve a series of murders in Vienna.",
     "saved": false,
-    "watched": false
+    "liked": false
   },
   {
     "id": 16,
@@ -169,7 +169,7 @@
     "category": "",
     "description": "Grace and Franky are speechless when their husbands reveal that they are in love with each other. But when the shock wears off, they became unexpectedly close friends.",
     "saved": false,
-    "watched": false
+    "liked": false
   },
   {
     "id": 17,
@@ -179,7 +179,7 @@
     "category": "",
     "description": "A psychoanalyst meets a personal trainer who changes his life forever.",
     "saved": false,
-    "watched": false
+    "liked": false
   },
   {
     "id": 18,
@@ -189,6 +189,6 @@
     "category": "",
     "description": "This movie pictures the Canaro case, i.e. the homicide of the criminal boxer Ricci, committed by the dogman -er canaro- of Rome.",
     "saved": false,
-    "watched": false
+    "liked": false
   }
 ]
