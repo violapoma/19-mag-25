@@ -21,10 +21,28 @@ nav a {
   font-weight: 300 !important;
 }
 
+nav a:hover i{
+  color: var(--bs-dark-rgb) !important;
+}
+
 nav .active {
   font-weight: 600 !important;
 }
 
+#notify li {
+  border-bottom: 1px solid var(--footer-color);
+  width: 90%;
+  margin: auto;
+  padding-left: 0;
+}
+
+#notify li a{
+  margin: 0;
+}
+
+#notify .dropdown-menu {
+  width: 200px;
+}
 
 nav li .fs-6 {
   font-size: 0.85rem !important;
