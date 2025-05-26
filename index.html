@@ -13,79 +13,90 @@
 
 <body class="bg-dark">
   <header>
-    <nav class="navbar navbar-expand-lg ">
+    <nav class="navbar navbar-expand-lg flex-wrap">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img class="logoImg" src="./assets/imgs/Netflix_Logo_RGB.png"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
-          <div>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="#">TV Shows</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Movies</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Recently Added</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#myListModal" onclick="fillMyListModal()">My List</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-white align-items-center">
-              <li class="nav-item">
-                <!-- search -->
-                <form class="d-flex align-items-center" role="search">
-                  <input id="searchField" class="form-control me-2 hidden" type="search" placeholder="Search"
-                    aria-label="Search" />
-                  <button type="button" id="searchBtn"><i class="bi bi-search"></i></button>
-                </form>
-                <!-- fine search -->
-              </li>
-              <li class="nav-item">
-                <a class="nav-link fs-6" href="#">KIDS</a>
-              </li>
 
-              <li id="notify" class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  <i class="bi bi-bell-fill"></i></a>
-                </a>
-                <ul class="dropdown-menu bg-dark">
-                  <li><a class="dropdown-item" href="#">notifica 1</a></li>
-                  <li><a class="dropdown-item" href="#">notifica 2 più lunga</a></li>
-                  <li><a class="dropdown-item" href="#">notifica 3 </a></li>
-                  <li><a class="dropdown-item" href="#">notifica 4 più lunga</a></li>
+        <div class="w-100 d-flex justify-content-between align-items-center">
+          <a class="navbar-brand" href="#"><img class="logoImg" src="./assets/imgs/Netflix_Logo_RGB.png"></a>
 
-                </ul>
-              </li>
+          <!-- fuori dal toggler-->
+          <div id="outOfToggler" class="d-flex align-items-center justify-content-end text-white">
+            <div class="nav-item">
+              <a class="nav-link fs-6" href="#">KIDS</a>
+            </div>
+            <div id="notify" class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="bi bi-bell-fill"></i></a>
+              </a>
+              <ul class="dropdown-menu bg-dark">
+                <li><a class="dropdown-item" href="#">notifica 1</a></li>
+                <li><a class="dropdown-item" href="#">notifica 2 più lunga</a></li>
+                <li><a class="dropdown-item" href="#">notifica 3 </a></li>
+                <li><a class="dropdown-item" href="#">notifica 4 più lunga</a></li>
+              </ul>
+            </div>
 
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  <img class="profileImg" src="./assets/imgs/myIcon.png" alt="Profile">
-                </a>
-                <ul class="dropdown-menu bg-dark">
-                  <li><a class="dropdown-item" href="#">Your profile</a></li>
-                  <li><a class="dropdown-item" href="#">Premium 👑</a></li>
-                  <li>
-                    <hr class="dropdown-divider bg-light">
-                  </li>
-                  <li><a class="dropdown-item" href="#">Log out<i class="bi bi-box-arrow-right text-white ms-2"></i></a></i></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+            <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img class="profileImg" src="./assets/imgs/myIcon.png" alt="Profile">
+              </a>
+              <ul class="dropdown-menu bg-dark">
+                <li><a class="dropdown-item" href="#">Your profile</a></li>
+                <li><a class="dropdown-item" href="#">Premium 👑</a></li>
+                <li>
+                  <hr class="dropdown-divider bg-light">
+                </li>
+                <li><a class="dropdown-item" href="#">Log out<i
+                      class="bi bi-box-arrow-right text-white ms-2"></i></a></i>
+                </li>
+              </ul>
+            </div>
+          </div> <!-- fuori dal toggler fine-->
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="d-flex justify-content-between">
+            <!-- navbar toggler -->
+            <div>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">TV Shows</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Movies</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#newRel">Recently Added</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#myListModal"
+                    onclick="fillMyListModal()">My List</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-item">
+              <form class="d-flex align-items-center" role="search">
+                <button type="button" id="searchBtn"><i class="bi bi-search"></i></button>
+                <input id="searchField" class="form-control me-2 hidden" type="search" placeholder="Search" aria-label="Search" />
+              </form>
+            </div>
+          </div>
+        </div> <!-- div toggler -->
+
+
+
+
+
       </div>
     </nav>
   </header>
@@ -122,7 +133,7 @@
       <div class="modal-dialog">
         <div class="modal-content bg-dark text-white">
           <div class="modal-header">
-            <h2 id="myListModalLabel" class="modal-title m-3" >My List</h2>
+            <h2 id="myListModalLabel" class="modal-title m-3">My List</h2>
           </div>
           <div class="modal-body">
 
@@ -353,8 +364,8 @@
           <!-- Carousel -->
           <div id="netflixCarousel" class="netflix-carousel">
 
-            <div class="movie-card" data-bs-toggle="modal" data-bs-target="#movieModal" onclick="fillMovieModal(12)"><img
-                src="./assets/imgs/movies/12.png" class="card-img-top" alt="movie 12">
+            <div class="movie-card" data-bs-toggle="modal" data-bs-target="#movieModal" onclick="fillMovieModal(12)">
+              <img src="./assets/imgs/movies/12.png" class="card-img-top" alt="movie 12">
               <div class="card-body">
                 <div>
                   <h5 class="card-title "> </h5>
@@ -363,8 +374,8 @@
               </div>
             </div>
 
-            <div class="movie-card" data-bs-toggle="modal" data-bs-target="#movieModal" onclick="fillMovieModal(11)"><img
-                src="./assets/imgs/movies/11.png" class="card-img-top" alt="movie 11">
+            <div class="movie-card" data-bs-toggle="modal" data-bs-target="#movieModal" onclick="fillMovieModal(11)">
+              <img src="./assets/imgs/movies/11.png" class="card-img-top" alt="movie 11">
               <div class="card-body ">
                 <div>
                   <h5 class="card-title"> </h5>
@@ -424,14 +435,14 @@
             </div>
 
             <div class="movie-card" data-bs-toggle="modal" data-bs-target="#movieModal" onclick="fillMovieModal(3)"><img
-              src="./assets/imgs/movies/3.png" class="card-img-top" alt="movie 3">
-            <div class="card-body">
-              <div>
-                <h5 class="card-title"> </h5>
-                <p class="card-text"> </p>
+                src="./assets/imgs/movies/3.png" class="card-img-top" alt="movie 3">
+              <div class="card-body">
+                <div>
+                  <h5 class="card-title"> </h5>
+                  <p class="card-text"> </p>
+                </div>
               </div>
             </div>
-          </div>
 
             <div class="movie-card" data-bs-toggle="modal" data-bs-target="#movieModal" onclick="fillMovieModal(1)"><img
                 src="./assets/imgs/movies/1.png" class="card-img-top" alt="movie 1">

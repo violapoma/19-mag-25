@@ -16,6 +16,11 @@ nav>div.container-fluid {
   padding: 0;
 }
 
+/* icona panino scura */
+.navbar-toggler-icon {
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
 nav a {
   color: white !important;
   font-weight: 300 !important;
@@ -73,12 +78,21 @@ nav li .fs-6 {
   color: black !important;
 }
 
-li>form>button {
+div>form>button {
   background-color: transparent !important;
   border: none !important;
   color: white;
 }
-
+#outOfToggler {
+  width: 40%;
+  order: 1;
+}
+.navbar-toggler {
+  order:2;
+}
+#outOfToggler>* {
+  padding-left: 1em;
+}
 main {
   /* border: 1px solid gainsboro; */
   width: 90%;
